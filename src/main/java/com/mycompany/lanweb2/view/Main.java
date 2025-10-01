@@ -13,7 +13,6 @@ import com.mycompany.lanweb2.model.Computador;
 import com.mycompany.lanweb2.model.Sessao;
 import com.mycompany.lanweb2.model.Venda;
 
-
 public class Main {
     public static void main(String[] args) {
         // Controllers
@@ -39,7 +38,9 @@ public class Main {
         // Iniciando sessões
         Cliente cliente1 = clienteController.service.listarClientes().get(0);
         Computador computador1 = new Computador(1);
-        Sessao sessao1 = new Sessao(cliente1, computador1, 3);
+
+        // Corrigido: passando um ID para a sessão (ex: 1)
+        Sessao sessao1 = new Sessao(1, cliente1, computador1, 3);
         sessaoController.iniciarSessao(sessao1);
 
         System.out.println("\nLista de Sessões:");
@@ -55,5 +56,3 @@ public class Main {
         vendaController.listarVendas();
     }
 }
-
-

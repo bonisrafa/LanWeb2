@@ -4,40 +4,27 @@
  */
 package com.mycompany.lanweb2.model;
 
-/**
- *
- * @author Rafaella
- */
-
-
-
-
 public class Sessao {
-    private Cliente cliente;
-    private Computador computador;
-    private int horas;
+    private int id;
+    private String cliente;
+    private int minutos;
 
-    public Sessao(Cliente cliente, Computador computador, int horas) {
+    public Sessao(int id, String cliente, int minutos) {
+        this.id = id;
         this.cliente = cliente;
-        this.computador = computador;
-        this.horas = horas;
-        this.computador.setOcupado(true); // marca computador como ocupado
+        this.minutos = minutos;
     }
 
-    public Cliente getCliente() { return cliente; }
-    public Computador getComputador() { return computador; }
-    public int getHoras() { return horas; }
-
-    public double calcularValor(double valorPorHora) {
-        return horas * valorPorHora;
+    public Sessao(int i, Cliente cliente1, Computador computador1, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void encerrarSessao() {
-        computador.setOcupado(false);
+    public String getCliente() {
+        return cliente;
     }
 
     @Override
     public String toString() {
-        return "Sessão de " + cliente.getNome() + " no " + computador + " por " + horas + "h";
+        return "Sessao{id=" + id + ", cliente=" + cliente + ", minutos=" + minutos + "}";
     }
 }

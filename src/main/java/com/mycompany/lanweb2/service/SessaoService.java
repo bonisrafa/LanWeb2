@@ -4,9 +4,6 @@
  */
 package com.mycompany.lanweb2.service;
 
-
-
-
 import com.mycompany.lanweb2.model.Sessao;
 import com.mycompany.lanweb2.repository.SessaoRepository;
 import java.util.List;

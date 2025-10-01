@@ -4,26 +4,18 @@
  */
 package com.mycompany.lanweb2.repository;
 
-/**
- *
- * @author Rafaella
- */
-
-
-
 import com.mycompany.lanweb2.model.Sessao;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SessaoRepository {
-    private final List<Sessao> sessoes = new ArrayList<>();
+    private final List<Sessao> storage = new ArrayList<>();
 
     public void salvar(Sessao sessao) {
-        sessoes.add(sessao);
+        storage.add(sessao);
     }
 
     public List<Sessao> buscarTodos() {
-        return sessoes;
+        return new ArrayList<>(storage);
     }
 }
-
